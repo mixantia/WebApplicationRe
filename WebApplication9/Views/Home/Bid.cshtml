@@ -1,0 +1,40 @@
+﻿@model WebApplication9.DataAccess.Model.Company
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Новая цена</title>
+</head>
+<body>
+    <div>
+        <h3>Новая цена</h3>
+
+        <form method="post">
+            <input type="hidden" value="@ViewBag.CompanyName" name="CompanyName" />
+            <table>
+                <tr>
+                    <td>Дата:</td>
+                    <td><input type="datetime" name="Dt"/> </td>
+                </tr>
+                <tr>
+                    <td>Компания:</td>
+                    <td>@ViewBag.CompanyName</td>
+                    @*<td><input type="text" name="CompanyName" /></td>*@
+                </tr>
+                <tr>
+                    <td>Цена:</td>
+                    <td><input type="number" name="Price" /></td>
+                </tr>
+                <tr>
+                    <td>Id</td>
+                    <td><input type="text" name="CompId" value=@ViewBag.CompanyId/></td>
+                </tr>
+                <tr><td><input type="submit" value="Отправить" /> </td><td></td></tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

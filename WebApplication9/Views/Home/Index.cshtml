@@ -1,0 +1,31 @@
+﻿@model IEnumerable<WebApplication9.Models.Company>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Компании</title>
+</head>
+<body>
+    <h3>Компании</h3>
+    <table>
+        <tr>
+            <td>ID</td>
+            <td>Имя</td>
+            <td>Стоимость</td>
+            <td></td>
+        </tr>
+        @foreach (var company in Model)
+        {
+    <tr>
+        <td>@company.Id</td>
+        <td>@company.Name</td>
+        <td><a href="~/Home/Price/@company.Id">Торги</a></td>
+        <td><a href="~/Home/Bid/@company.Id">Новая цена</a></td>
+    </tr>
+        }
+    </table>
+</body>
+</html>
